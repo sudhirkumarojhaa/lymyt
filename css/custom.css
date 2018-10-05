@@ -21,6 +21,18 @@ img {
   height: 100%;
 }
 
+.no-padding {
+  padding: 0;
+}
+
+.rotate-left {
+  transform: rotate(-5deg);
+}
+
+.rotate-right{
+  transform: rotate(15deg);
+}
+
 .banner {
   height: 100vh;
   position: relative;
@@ -34,7 +46,7 @@ img {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
   left: 0;
@@ -53,7 +65,7 @@ img {
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 6rem;
   color: orange;
   margin: 0;
   font-family: 'Notable', sans-serif;
@@ -64,41 +76,69 @@ img {
 }
 
 .city {
-  font-size: 10px;
+  font-size: 1.4rem;
   letter-spacing: 2px;
   margin-top: 20px;
 }
 
-.quotes {
-  padding: 100px 0;
+.quotes .content{
+  padding: 75px;
   background-color: orange;
   text-align: center;
+  font-family: fantasy;
   font-style: italic;
+  font-size: 18px;
+  color: #05025b;
+}
+
+.author {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 18px;
+  margin-top: 140px;
+  font-style: normal;
 }
 
 .fas,
 .fab {
-  font-size: 24px;
+  font-size: 40px;
   padding: 10px;
+  color: #fff;
 }
+
+.machine {
+  background-image: url("../img/s.jpg");
+  background-repeat: repeat;
+  padding: 200px 0;
+}
+
+
 
 .machine .thumbnail {
   position: relative;
-  margin: 30px;
+  margin: 50px;
   height: 500px;
+  overflow:hidden;
 }
 
 .machine .caption {
   position: absolute;
+  transform: skewX(-30deg);
+  top: 0;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.8);
-  padding: 20px 0;
+  left: 50%;
+  width: auto;
+  padding: 15px 30px;
   font-size: 24px;
-  color: orange;
+  background-color: rgba(185, 61, 13, 0.5);
   text-align: center;
   font-family: 'Notable', sans-serif;
+
+}
+
+
+.machine .caption h1 {
+  margin-top: 50%;
+  color: #fff;
 }
 
 .time {
@@ -111,7 +151,7 @@ img {
 }
 
 .contact {
-  padding: 50px;
+  padding: 100px 0;
   text-align: center;
 }
 
@@ -139,11 +179,12 @@ form input {
 
 .footer ul {
   margin: 20px 0;
+  text-align: right;
 }
 
 ul li {
   list-style: none;
-  font-size: 14px;
+  font-size: 24px;
   color: Orange;
 }
 
@@ -151,10 +192,11 @@ ul li {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
-  font-size: 10px;
-  color: orange;
-  margin-top: 40px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #a90000;
+  padding: 5px 30px;
+  margin-top: 100px;
 }
 
 .social {
@@ -177,7 +219,7 @@ ul li {
 }
 
 .map {
-  height: 400px;
+  height: 60vh;
 }
 
 .footer {
@@ -211,13 +253,25 @@ ul li {
   padding: 20px;
 }
 
+
+
 @media screen and (max-width: 768px) {
   .banner {
-    background-position-x: -600px;
+    background-position-x: -900px;
+  }
+
+  .banner-content{
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .title{
+    font-size: 4rem;
   }
   .footer ul {
     margin: 0;
     padding: 20px 0;
+    text-align: left;
   }
   .machine .thumbnail {
     margin: 15px 0;
