@@ -5,6 +5,7 @@ body {
   color: #000;
 }
 
+p,
 h1,
 h2,
 h3,
@@ -21,22 +22,24 @@ img {
   height: 100%;
 }
 
-.no-padding {
-  padding: 0;
+a:hover {
+  transition: all .9s ease-in-out;
+  text-decoration: none;
+  color: #05025b;
 }
 
 .rotate-left {
   transform: rotate(-5deg);
 }
 
-.rotate-right{
+.rotate-right {
   transform: rotate(15deg);
 }
 
 .banner {
   height: 100vh;
   position: relative;
-  background-image: url("../img/gym.jpg");
+  background-image: url("../img/banner.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -76,13 +79,13 @@ img {
 }
 
 .city {
-  font-size: 1.4rem;
+  font-size: 1rem;
   letter-spacing: 2px;
   margin-top: 20px;
 }
 
-.quotes .content{
-  padding: 75px;
+.quote .content {
+  padding: 45px;
   background-color: orange;
   text-align: center;
   font-family: fantasy;
@@ -94,8 +97,43 @@ img {
 .author {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 18px;
-  margin-top: 140px;
+  margin-top: 20px;
   font-style: normal;
+}
+
+.about {
+  color: #fff;
+  font-size: 20px;
+  background-image: url("../img/bg.jpg");
+  background-repeat: repeat;
+}
+
+.shaped {
+  height: 100vh;
+  width: 40vw;
+  float: right;
+  background: black url('../img/man.jpg') center top no-repeat;
+  background-size: cover;
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+  shape-margin: 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+  shape-image-threshold: 0.5;
+}
+
+.about-content {
+  padding: 40px 0;
+}
+
+.about h1 {
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.whyus li {
+  font-size: 20px;
+  padding: 20px 0;
+  font-style: italic;
 }
 
 .fas,
@@ -106,48 +144,49 @@ img {
 }
 
 .machine {
-  background-image: url("../img/s.jpg");
+  background-image: url("../img/bg.jpg");
   background-repeat: repeat;
-  padding: 200px 0;
+  padding: 20px 0;
 }
-
-
 
 .machine .thumbnail {
   position: relative;
-  margin: 50px;
-  height: 500px;
-  overflow:hidden;
+  margin: 20px 40px;
+  height: 600px;
+  overflow: hidden;
 }
 
 .machine .caption {
   position: absolute;
-  transform: skewX(-30deg);
+  transform: skewX(-10deg);
   top: 0;
   bottom: 0;
   left: 50%;
-  width: auto;
-  padding: 15px 30px;
-  font-size: 24px;
+  width: 30%;
+  padding: 5px 10px;
+  font-size: 18px;
   background-color: rgba(185, 61, 13, 0.5);
   text-align: center;
+  text-shadow: 0 0 20px #fff;
   font-family: 'Notable', sans-serif;
-
 }
-
 
 .machine .caption h1 {
   margin-top: 50%;
-  color: #fff;
+  letter-spacing: 2px;
 }
 
 .time {
   padding: 50px 0;
-  background-image: url("../img/c.jpg");
+  background-image: url("../img/gym-bg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.row {
+  justify-content: center;
 }
 
 .contact {
@@ -182,7 +221,7 @@ form input {
   text-align: right;
 }
 
-ul li {
+.footer ul li {
   list-style: none;
   font-size: 24px;
   color: Orange;
@@ -192,11 +231,30 @@ ul li {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-size: 16px;
+  font-size: 12px;
   color: #fff;
   background-color: #a90000;
   padding: 5px 30px;
   margin-top: 100px;
+}
+
+.open {
+  color: #999;
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.open h6 {
+  margin: 10px 0;
+  color: red;
+}
+.open p {
+  font-size: 12px;
+  line-height:4px ;
+  color: #666;
+  padding: 8px 0;
+  text-transform: uppercase;
 }
 
 .social {
@@ -233,7 +291,16 @@ ul li {
 .cards .fas,
 .cards .far {
   font-size: 40px;
+  color: #000;
   padding: 5px 0;
+}
+
+.cards h1 {
+  font-size: 30px;
+}
+
+.cards .far {
+  color: red;
 }
 
 .cards .header {
@@ -243,29 +310,27 @@ ul li {
   padding: 5px 0;
   flex-direction: column;
   background-color: orange;
-  font-family: 'Poiret One',
-  sans-serif;
+  font-family: 'Poiret One', sans-serif;
   text-align: center;
+  height: 150px;
 }
 
 .cards .caption {
   background-color: white;
-  padding: 20px;
+  padding: 40px;
+  text-align: center;
 }
-
-
 
 @media screen and (max-width: 768px) {
   .banner {
-    background-position-x: -900px;
+    background-position: right;
   }
-
-  .banner-content{
-    left:50%;
+  .banner-content {
+    left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
-  .title{
+  .title {
     font-size: 4rem;
   }
   .footer ul {
@@ -273,7 +338,35 @@ ul li {
     padding: 20px 0;
     text-align: left;
   }
+  .machine {
+    padding: 20px 0;
+  }
   .machine .thumbnail {
-    margin: 15px 0;
+    height: auto;
+    margin: 20px 0;
+  }
+  .rotate-left,
+  .rotate-right {
+    transform: rotate(0deg);
+  }
+  .machine .caption h1 {
+    font-size: 30px;
+    margin: 0;
+  }
+  .machine .caption {
+    position: unset;
+    transform: skewX(0deg);
+    width: 100%;
+    padding: 5px;
+  }
+  .about {
+    font-size: 16px;
+  }
+  .about li {
+    font-size: 14px;
+    padding: 3px;
+  }
+  .shaped {
+    display: none;
   }
 }
