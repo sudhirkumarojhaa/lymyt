@@ -332,6 +332,7 @@ form input {
 @media screen and (max-width: 768px) {
   .banner {
     background-position: center;
+    background-attachment: unset;
   }
   .banner-content {
     left: 50%;
