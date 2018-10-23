@@ -34,7 +34,7 @@ a:hover {
 }
 
 .rotate-right {
-  transform: rotate(15deg);
+  transform: rotate(5deg);
 }
 
 .banner {
@@ -80,7 +80,7 @@ a:hover {
 }
 
 .city {
-  font-size: 1rem;
+  font-size: 2rem;
   letter-spacing: 2px;
   margin-top: 20px;
 }
@@ -156,11 +156,11 @@ a:hover {
 
 .machine .thumbnail {
   position: relative;
-  margin: 50px 100px;
-  height: 600px;
+  margin: 100px 0;
+  height: 700px;
   overflow: hidden;
-  border: 2px solid transparent;
-  border-image: linear-gradient( rgb(141, 96, 38),transparent )1 100%;
+  border: 20px solid transparent;
+  border-image: linear-gradient( rgb(141, 1, 1),transparent )1 100%;
 }
 
 .machine .caption {
@@ -335,6 +335,7 @@ form input {
 .footer {
   padding: 40px 20px 5px 20px;
 }
+
 
 @media screen and (max-width: 768px) {
   .banner {
