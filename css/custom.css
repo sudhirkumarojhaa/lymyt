@@ -29,14 +29,6 @@ a:hover {
   color: #05025b;
 }
 
-.rotate-left {
-  transform: rotate(-5deg);
-}
-
-.rotate-right {
-  transform: rotate(5deg);
-}
-
 .banner {
   height: 100vh;
   position: relative;
@@ -156,11 +148,12 @@ a:hover {
 
 .machine .thumbnail {
   position: relative;
-  margin: 100px 0;
-  height: 700px;
+  margin: 30px;
   overflow: hidden;
-  border: 20px solid transparent;
-  border-image: linear-gradient( rgb(141, 1, 1),transparent )1 100%;
+  height: 500px;
+  border: 10px solid rgb(255, 174, 24);
+  padding: 15px;
+  border-radius: 15px;
 }
 
 .machine .caption {
@@ -176,6 +169,11 @@ a:hover {
   text-align: center;
   text-shadow: 0 0 20px #fff;
   font-family: 'Notable', sans-serif;
+}
+
+.machine .row {
+  justify-content: center;
+  margin: 100px 0;
 }
 
 .machine .caption h1 {
@@ -229,10 +227,6 @@ a:hover {
   text-align: center;
 }
 
-.row {
-  justify-content: center;
-}
-
 .contact {
   padding: 150px 0;
   text-align: center;
@@ -266,7 +260,7 @@ form input {
   text-align: right;
 }
 
-.footer ul a{
+.footer ul a {
   list-style: none;
   font-size: 24px;
   color: Orange;
@@ -322,7 +316,7 @@ form input {
   font-size: 20px;
 }
 
-.social .fab:hover{
+.social .fab:hover {
   transform: scale(1.1);
   background: white;
   color: #000;
@@ -335,7 +329,6 @@ form input {
 .footer {
   padding: 40px 20px 5px 20px;
 }
-
 
 @media screen and (max-width: 768px) {
   .banner {
@@ -360,10 +353,6 @@ form input {
   .machine .thumbnail {
     height: auto;
     margin: 20px 0;
-  }
-  .rotate-left,
-  .rotate-right {
-    transform: rotate(0deg);
   }
   .machine .caption h1 {
     font-size: 30px;
